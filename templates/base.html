@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reestri</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../static/src/css/style.css" />
+    </head>
+    <body>
+        <form
+            class="form-inline my-2 my-lg-0 searchForm"
+            action="/search"
+            method="POST"
+        >
+            <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Personal Number"
+                name="personal_number"
+            />
+            <input
+                class="form-control mr-sm-1"
+                type="search"
+                placeholder="First Name"
+                name="first_name"
+            /><input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Last Name"
+                name="last_name"
+            /><input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Father's Name"
+                name="fathers_name"
+            /><input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="YYYY-MM-DD"
+                name="dob"
+            />
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">
+                Search
+            </button>
+        </form>
+        {% block content %}{% endblock %}
+    </body>
+</html>

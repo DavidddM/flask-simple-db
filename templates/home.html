@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Father's Name</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Sex</th>
+            <th scope="col">Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for data in data_list %}
+        <tr>
+            <th scope="row">{{data['personal_number']}}</th>
+            <td>{{data['first_name']}}</td>
+            <td>{{data['last_name']}}</td>
+            <td>{{data['fathers_name']}}</td>
+            <td>{{data['dob']}}</td>
+            <td>{{data['sex']}}</td>
+            <td>{{data['address']}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
